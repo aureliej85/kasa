@@ -1,0 +1,20 @@
+.header {
+    max-width: 1240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 0 10px 0;
+    align-items: center;
+}
+
+.logo {
+    width: 210px;
+}
+
+.link {
+    color: #FF6060;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 57px;
+}
+

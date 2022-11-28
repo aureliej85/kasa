@@ -1,0 +1,20 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.footer {
+    margin-top: 100px;
+    height: 209px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__img {
+        width: 122px;
+    }
+    &__text{
+        margin-top: 20px;
+        @include mixins.text(24px, 500, white);
+    }
+}

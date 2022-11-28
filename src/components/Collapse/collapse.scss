@@ -1,0 +1,30 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.collapse{
+    width: 100%;
+    margin-bottom: 30px;
+    &__bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: variables.$mainColor;
+        border-radius: 10px;
+        
+
+        &__title{
+            @include mixins.text(18px, 500, white);
+        }
+    }
+   
+    &__content {
+        padding: 15px;
+        border-radius: 10px;
+        background-color: variables.$bgColor;
+        @include mixins.text(18px, 400, variables.$mainColor);
+    }
+}
+
+

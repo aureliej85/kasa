@@ -1,0 +1,65 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    align-items: center;
+
+    &__title{
+        @include mixins.text(36px, 500, variables.$mainColor);    
+    }
+
+    &__host{
+        display: flex;
+        align-items: center;
+        @include mixins.text(18px, 500, variables.$mainColor);  
+       
+        img{
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;    
+        }
+        
+        &__name{
+            text-align: left;
+            width: 90px;
+        }
+    }
+}
+
+.location{
+    @include mixins.text(18px, 500, variables.$mainColor);  
+}
+
+.meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+
+    &__tag{
+        align-items: center;
+
+    }
+}
+
+
+.collapseDiv{
+    margin: 20px 0 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__span {
+        width: 47%;
+
+        li {
+            list-style: none;
+        }
+    }
+}

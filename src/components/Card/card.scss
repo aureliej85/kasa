@@ -1,0 +1,29 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.card {
+    max-width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.picFill {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;  
+}
+
+
+.title {
+   position: relative;
+   bottom: 60px;
+   left: 20px;
+   @include mixins.text(18px, 500, white );     
+  }
+
+  .linkCard {
+    text-decoration: none;
+  }

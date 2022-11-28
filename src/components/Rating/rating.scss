@@ -1,0 +1,10 @@
+.stars{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
