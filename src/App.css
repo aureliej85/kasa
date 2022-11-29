@@ -8,6 +8,10 @@ padding: 0 100px 0 100px;
   pointer-events: none;
 }
 
+.active {
+  border-bottom: 2px solid #FF6060;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

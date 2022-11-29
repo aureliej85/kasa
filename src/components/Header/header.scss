@@ -16,5 +16,9 @@
     text-decoration: none;
     font-size: 24px;
     margin-left: 57px;
+
+    &:active{
+        border-bottom: 2px solid #FF6060;
+    }
 }
 

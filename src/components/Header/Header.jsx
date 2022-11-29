@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import "./header.scss"
 
 export default function Header(){
@@ -9,8 +9,8 @@ export default function Header(){
                 <img src="../logo-kasa.jpeg" className="logo" />
             </Link>
             <span className="links">
-            <Link to="/" className="link">Accueil</Link>
-            <Link to="/a-propos" className="link">A propos</Link>
+            <NavLink to="/" className="link">Accueil</NavLink>
+            <NavLink to="/a-propos" className="link">A propos</NavLink>
             </span>
         </nav>
     )
