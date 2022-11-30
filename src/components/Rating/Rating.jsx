@@ -1,4 +1,5 @@
 import React from "react";
+import "./rating.scss"
 
 export default function Rating({rating}){
 

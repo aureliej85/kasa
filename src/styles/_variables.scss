@@ -2,3 +2,12 @@
 
 $mainColor: #FF6060;
 $bgColor: #F6F6F6;
+$lightColor: white;
+
+$breakpoints: (
+  mobile-xs: 425px,
+  mobile-max: 426px,
+  tablet-min: 768px,
+  tablet-max: 991.98px,
+  desktop-min: 992px,
+);

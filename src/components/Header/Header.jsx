@@ -5,12 +5,12 @@ import "./header.scss"
 export default function Header(){
     return(
         <nav className="header">
-            <Link to="/" className="header__link">
-                <img src="../logo-kasa.jpeg" className="logo" />
+            <Link to="/" className="header__link__logo">
+                <img src="../logo-kasa.jpeg" className="header__link__logo" />
             </Link>
-            <span className="links">
-            <NavLink to="/" className="link">Accueil</NavLink>
-            <NavLink to="/a-propos" className="link">A propos</NavLink>
+            <span className="header__links">
+                <NavLink to="/" className="header__links__link">Accueil</NavLink>
+                <NavLink to="/a-propos" className="header__links__link">A propos</NavLink>
             </span>
         </nav>
     )

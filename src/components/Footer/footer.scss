@@ -17,4 +17,12 @@
         margin-top: 20px;
         @include mixins.text(24px, 500, white);
     }
+
+    @include mixins.mobile-xs{
+        &__text{
+         
+            @include mixins.text(12px, 500, white);
+        }
+      
+      }
 }

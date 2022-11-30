@@ -1,51 +1,162 @@
 @use "../../styles/mixins";
 @use "../../styles/variables";
 
-.top {
-    width: 100%;
+
+.hosts {
+    margin: auto;
+    max-width: 1240px;
+}
+
+
+.top0{
+    margin: 30px 0 30px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 30px;
-    align-items: center;
 
-    &__title{
-        @include mixins.text(36px, 500, variables.$mainColor);    
-    }
-
-    &__host{
+    .top1{
         display: flex;
-        align-items: center;
-        @include mixins.text(18px, 500, variables.$mainColor);  
-       
-        img{
-            width: 64px;
-            height: 64px;
-            border-radius: 50%; 
-             
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__title{
+            @include mixins.text(36px, 500, variables.$mainColor); 
+
+            span {
+                display: block;
+                @include mixins.text(18px, 500, variables.$mainColor);
+            }
         }
-        
-        &__name{
-            text-align: right;
-            width: 90px;
-            padding-right: 5px;  
+
+        &__tags{
+            align-items: center;
+            margin-top: 20px;
         }
     }
-}
 
-.location{
-    @include mixins.text(18px, 500, variables.$mainColor);  
-}
+    .top2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-.meta {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
+        &__host{
+            display: flex;
+            align-items: center;
+            @include mixins.text(18px, 500, variables.$mainColor);  
+       
+            img{
+                width: 64px;
+                height: 64px;
+                border-radius: 50%; 
+            }
+        
+            &__name{
+                text-align: right;
+                width: 90px;
+                padding-right: 5px;  
+            }
+        }   
+        
+        &__review{
+            margin-top: 20px;
+        }
+    }
 
-    &__tag{
-        align-items: center;
+    @include mixins.mobile-xs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 335px;
+        margin: auto;
+
+        .top1{
+            margin-top: 20px;
+            &__title{
+                @include mixins.text(18px, 500, variables.$mainColor); 
+
+            span {
+                margin-top: 10px;
+                @include mixins.text(14px, 500, variables.$mainColor);
+            }
+
+            }
+        }
+
+        .top2{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: 10px 0 20px 0;
+            align-items: center;
+
+            &__host{
+                @include mixins.text(12px, 500, variables.$mainColor); 
+
+                img{
+                    width: 32px;
+                    height: 32px;
+                }
+
+                &__name{
+                    text-align: right;
+                    width: 78px;
+                    padding-right: 5px;  
+                }
+            }
+
+            &__review{
+                margin-top: 0px;
+            }
+        }
+
+    }
+
+    @include mixins.tablet{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 768px;
+        margin: auto;
+
+        .top1{
+            margin-top: 20px;
+            &__title{
+                @include mixins.text(18px, 500, variables.$mainColor); 
+
+            span {
+                margin-top: 10px;
+                @include mixins.text(14px, 500, variables.$mainColor);
+            }
+
+            }
+        }
+
+        .top2{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: 10px 0 20px 0;
+            align-items: center;
+
+            &__host{
+                @include mixins.text(12px, 500, variables.$mainColor); 
+
+                img{
+                    width: 32px;
+                    height: 32px;
+                }
+
+                &__name{
+                    text-align: right;
+                    width: 78px;
+                    padding-right: 5px;  
+                }
+            }
+
+            &__review{
+                margin-top: 0px;
+            }
+        }
 
     }
 }
@@ -63,5 +174,30 @@
         li {
             list-style: none;
         }
+    }
+
+    @include mixins.mobile-xs{
+        margin: auto;
+        flex-direction:column;
+        justify-content: center;
+
+            &__span{
+                margin: auto;
+                max-width: 335px;
+                width: unset;
+            }
+      
+      }
+
+    @include mixins.tablet{
+        margin: auto;
+        flex-direction:column;
+        justify-content: center;
+
+            &__span{
+                margin: auto;
+                width: 100%;
+            }
+
     }
 }

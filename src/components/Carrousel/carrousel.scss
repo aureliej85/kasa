@@ -1,38 +1,74 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
 .carrousel {
+  height: 415px;
+  max-width: 1240px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 1240px;
     height: 415px;
-    max-width: 1240px;
+    object-fit: cover;
     border-radius: 25px;
-    overflow: hidden;
+  }
 
-        img {
-        width: 1240px;
-        height: 415px;
-        object-fit: cover;
-        border-radius: 25px;
-        
-    }
-
-    &__previous img{
+  &__previous {
+    border: none;
+    background-color: transparent;
+    
+    img {
         height: 80px;
         width: 45px;
         position: absolute;
-        top: 300px;
-        left: 100px;
-       
+        top: 50%;
+        left: 15px;
+      }
+  }
+  
+
+  &__next img {
+    height: 80px;
+    width: 45px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+  }
+
+  &__number {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    @include mixins.text(18px, 500, white);
+  }
+
+  @include mixins.mobile-xs {
+    margin: auto;
+    height: 255px;
+    max-width: 335px;
+    border-radius: 10px;
+
+    img {
+      width: 335px;
+      height: 255px;
+      object-fit: cover;
+      border-radius: 10px;
     }
 
-    &__next img{
-        height: 80px;
-        width: 45px;
-        position: absolute;
-        top: 300px;
-        right: 100px;
-       
+    &__previous img {
+      height: 20px;
+      width: 12px;
+    }
+
+    &__next img {
+      height: 20px;
+      width: 12px;
     }
 
     &__number {
-        position: absolute;
-        top: 500px;
-        left: 50%;
-    }
+        display: none;
+      }
+  }
 }

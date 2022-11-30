@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <main>
-        <Banner texte={textBanner} cover="/bannerHome.jpg"/>
+        <Banner texte={textBanner} cover="/bannerHome.jpg" size={"small"}/>
         <div className="cards">
           {allKasas.map((elt) => <Card key={elt.id} title={elt.title} cover={elt.cover} id={elt.id}/>)}     
         </div>

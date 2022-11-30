@@ -7,6 +7,13 @@
     height: 340px;
     border-radius: 10px;
     margin-bottom: 50px;
+
+    @include mixins.mobile-xs{
+      max-width: 335px;
+      height: 255px;
+      margin-bottom: 20px;
+    
+    }  
     
 }
 
@@ -14,9 +21,16 @@
   content: '';
   position: absolute;
   left: 0; top: 0;
-  width: 340px; height: 340px;
+  width: 340px; 
+  height: 340px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   border-radius: 10px;
+
+  @include mixins.mobile-xs{
+    max-width: 335px;
+    height: 255px;
+  
+  }  
 }
 
 .picFill {
@@ -24,6 +38,11 @@
     height: 340px;
     object-fit: cover;
     border-radius: 10px;  
+    @include mixins.mobile-xs{
+      max-width: 335px;
+      height: 255px;
+    
+    }  
 }
 
 
