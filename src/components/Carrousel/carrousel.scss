@@ -4,8 +4,8 @@
 .carrousel {
   height: 415px;
   max-width: 1240px;
-  border-radius: 25px;
   overflow: hidden;
+  border-radius: 25px;
   position: relative;
 
   img {
@@ -18,25 +18,29 @@
   &__previous {
     border: none;
     background-color: transparent;
-    
+
     img {
-        height: 80px;
-        width: 45px;
-        position: absolute;
-        top: 50%;
-        left: 15px;
-      }
-  }
-  
-
-  &__next img {
-    height: 80px;
-    width: 45px;
-    position: absolute;
-    top: 50%;
-    right: 15px;
+      height: 80px;
+      width: 45px;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+    }
   }
 
+  &__next {
+    border: none;
+    background-color: transparent;
+
+    img {
+      height: 80px;
+      width: 45px;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+    }
+  }
+    
   &__number {
     position: absolute;
     bottom: 20px;
@@ -68,7 +72,35 @@
     }
 
     &__number {
-        display: none;
-      }
+      display: none;
+    }
+  }
+
+  @include mixins.tablet {
+    margin: auto;
+    height: 255px;
+    max-width: 768px;
+    border-radius: 10px;
+
+    img {
+      width: 768px;
+      height: 255px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    &__previous img {
+      height: 20px;
+      width: 12px;
+    }
+
+    &__next img {
+      height: 20px;
+      width: 12px;
+    }
+
+    &__number {
+      display: none;
+    }
   }
 }

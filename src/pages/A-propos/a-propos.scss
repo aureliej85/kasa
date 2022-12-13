@@ -1,28 +1,23 @@
 @use "../../styles/mixins";
 @use "../../styles/variables";
 
-.aboutUsDiv{
-    max-width: 1250px;
-    margin:auto;
-    padding-top: 50px;
+.aboutUsDiv {
+  max-width: 1250px;
+  margin: auto;
+  padding-top: 50px;
 
-    @include mixins.mobile-xs{
-        padding-top: 10px;
-      
-      }
-
+  @include mixins.mobile-xs {
+    padding-top: 10px;
+  }
 }
 
-.aboutUsCollapase{
-    margin:auto;
-    padding: 30px 0 0 30px;
-    max-width: 80%;
+.aboutUsCollapase {
+  margin: auto;
+  padding: 30px 0 0 0;
+  max-width: 80%;
 
-    @include mixins.mobile-xs{
-        max-width: 335px;
-        padding: 20px 0 0 0;
-      
-      }
-
+  @include mixins.mobile-xs {
+    max-width: 335px;
+    padding: 20px 0 0 0;
+  }
 }
-

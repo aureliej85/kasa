@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { json } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import Banner from "../../components/Banner/Banner";
-import "./home.scss"
+import "./home.scss";
 
 export default function Home() {
   let textBanner = "Chez vous, partout et ailleurs";
@@ -27,10 +26,12 @@ export default function Home() {
 
   return (
     <main>
-        <Banner texte={textBanner} cover="/bannerHome.jpg" size={"small"}/>
-        <div className="cards">
-          {allKasas.map((elt) => <Card key={elt.id} title={elt.title} cover={elt.cover} id={elt.id}/>)}     
-        </div>
+      <Banner texte={textBanner} cover="/bannerHome.jpg" size={"small"} />
+      <div className="cards">
+        {allKasas.map((elt) => (
+          <Card key={elt.id} title={elt.title} cover={elt.cover} id={elt.id} />
+        ))}
+      </div>
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { useEffect } from "react";
-import { useNavigate, useParams, Navigate } from "react-router-dom";
+import { useNavigate, useParams} from "react-router-dom";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Collapse from "../../components/Collapse/Collapse";
 import Rating from "../../components/Rating/Rating";
@@ -9,7 +9,6 @@ import "./fiche-logement.scss";
 
 export default function HomeDetails() {
   const idKasa = useParams();
-  console.log(idKasa);
   const [detailKasa, setDetailKasa] = useState([]);
   const navigation = useNavigate();
 
@@ -21,7 +20,6 @@ export default function HomeDetails() {
         }
       })
       .then((dataResponse) => {
-        console.log(dataResponse);
         let kasa = dataResponse.find((elt) => elt.id === idKasa.id);
         kasa ? setDetailKasa(kasa) : navigation("/error");
       })
@@ -30,11 +28,6 @@ export default function HomeDetails() {
       });
   }, []);
 
-  //let picTab = detailKasa.pictures.map((elt) => console.log("picTab " + elt));
-  console.table(detailKasa.pictures);
-  let picTab = detailKasa.pictures;
-
-  console.table(detailKasa.equipments);
 
   return (
     <Fragment>
@@ -57,7 +50,7 @@ export default function HomeDetails() {
               <div className="top2__host">
                 <span className="top2__host__name">{detailKasa.host.name}</span>
                 <span>
-                  <img src={detailKasa.host.picture} />
+                  <img src={detailKasa.host.picture} alt={detailKasa.host.name}/>
                 </span>
               </div>
               <div className="top2__review">
@@ -76,8 +69,8 @@ export default function HomeDetails() {
             <span className="collapseDiv__span">
               <Collapse
                 title={"Equipements"}
-                contentText={detailKasa.equipments.map((elt) => (
-                  <li>{elt}</li>
+                contentText={detailKasa.equipments.map((elt, index) => (
+                  <li key={index}>{elt}</li>
                 ))}
               />
             </span>

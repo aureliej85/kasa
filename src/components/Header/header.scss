@@ -1,53 +1,64 @@
 @use "../../styles/mixins";
 @use "../../styles/variables";
 
-
 .header {
-    max-width: 1240px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 40px 0 10px 0;
-    align-items: center;
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0 10px 0;
+  align-items: center;
+
+  &__link__logo {
+    width: 210px;
+  }
+
+  &__links__link {
+    @include mixins.text(24px, 500, variables.$mainColor);
+    text-decoration: none;
+    margin-left: 57px;
+
+    &:active {
+      border-bottom: 2px solid #ff6060;
+    }
+  }
+
+  @include mixins.mobile-xs {
+    max-width: 335px;
+    padding: 0 0 20px 0;
 
     &__link__logo {
-        width: 210px;
+      width: 145px;
     }
 
-    &__links__link{
-        @include mixins.text(24px, 500, variables.$mainColor); 
-        text-decoration: none;
-        margin-left: 57px;
+    &__links__link {
+      @include mixins.text(12px, 500, variables.$mainColor);
+      text-decoration: none;
+      margin-left: 10px;
 
-        &:active{
-            border-bottom: 2px solid #FF6060;
-        }
+      &:active {
+        border-bottom: 2px solid #ff6060;
+      }
+    }
+  }
+
+  @include mixins.tablet {
+    max-width: 768px;
+    padding: 20px 0 20px 0;
+
+    &__link__logo {
+      width: 130px;
     }
 
-    @include mixins.mobile-xs{
-        max-width: 335px;
-        padding: 0 0 20px 0;
+    &__links__link {
+      @include mixins.text(14px, 500, variables.$mainColor);
+      text-decoration: none;
+      margin-left: 10px;
 
-        &__link__logo {
-            width: 145px;
-        }
-
-        &__links__link{
-            @include mixins.text(12px, 500, variables.$mainColor); 
-            text-decoration: none;
-            margin-left: 10px;
-    
-            &:active{
-                border-bottom: 2px solid #FF6060;
-            }
-        }
-        
-      
+      &:active {
+        border-bottom: 2px solid #ff6060;
+      }
     }
+  }
 }
-
-
-
-
-

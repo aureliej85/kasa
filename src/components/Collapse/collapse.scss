@@ -43,7 +43,7 @@
     }
   }
 
-  @include mixins.tablet{
+  @include mixins.tablet {
     &__bar {
       &__title {
         @include mixins.text(13px, 500, white);
@@ -59,7 +59,6 @@
       @include mixins.text(12px, 400, variables.$mainColor);
     }
   }
-  
 }
 
 @keyframes append-animate {

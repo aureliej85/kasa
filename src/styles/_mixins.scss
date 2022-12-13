@@ -1,32 +1,28 @@
 @use "./variables";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
-
-
-@mixin text($size,$weight,$color) {
-    font-family: Montserrat;
-    font-size: $size;
-    font-weight: $weight;
-    color: $color;
+@mixin text($size, $weight, $color) {
+  font-family: Montserrat;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
 }
 
-
-
 @mixin tablet {
-    @media screen and (min-width: map-get(variables.$breakpoints, mobile-max)) and (max-width: map-get(variables.$breakpoints, tablet-min)) {
-      @content;
-    }
+  @media screen and (min-width: map-get(variables.$breakpoints, mobile-max)) and (max-width: map-get(variables.$breakpoints, tablet-min)) {
+    @content;
   }
-  
-  @mixin desktop {
-    @media screen and (min-width: map-get(variables.$breakpoints, desktop-min)) {
-      @content;
-    }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get(variables.$breakpoints, desktop-min)) {
+    @content;
   }
-  
-  @mixin mobile-xs {
-    @media screen and (max-width: map-get(variables.$breakpoints, mobile-xs)) {
-      @content;
-    }
+}
+
+@mixin mobile-xs {
+  @media screen and (max-width: map-get(variables.$breakpoints, mobile-xs)) {
+    @content;
   }
+}

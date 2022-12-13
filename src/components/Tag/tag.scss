@@ -2,14 +2,13 @@
 @use "../../styles/variables";
 
 .tag {
-    background-color: variables.$mainColor;
-    border-radius: 10px;
-    padding: 5px 10px 5px 10px;
-    margin-right: 7px;
-    @include mixins.text(14px, 500, white);
+  background-color: variables.$mainColor;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  margin-right: 7px;
+  @include mixins.text(14px, 500, white);
 
-    @include mixins.mobile-xs{
-        @include mixins.text(10px, 500, white);
-
-    }
+  @include mixins.mobile-xs {
+    @include mixins.text(10px, 500, white);
+  }
 }
